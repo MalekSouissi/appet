@@ -1,5 +1,11 @@
-import 'package:appet/ui/views/add_form.dart';
+import 'package:appet/ui/views/details_page.dart';
+import 'package:appet/ui/widgets/fadeIn.dart';
+import 'package:appet/ui/views/home.dart';
+import 'package:appet/ui/widgets/FormBg.dart';
 import 'package:appet/ui/views/splashScreen.dart';
+import 'package:appet/ui/widgets/navBar.dart';
+import 'package:appet/ui/widgets/photoContainer.dart';
+import 'package:appet/ui/widgets/postItem.dart';
 import 'package:flutter/material.dart';
 import 'package:appet/ui/widgets/background.dart';
 
@@ -10,7 +16,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: AddForm(),
+      home: SplashScreen(),
+      routes: {
+        '/home': (context) => HomePage(),
+        '/details': (context) => DetailsPage(),
+      },
     );
   }
 }
